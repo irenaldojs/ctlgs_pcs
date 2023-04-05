@@ -1,0 +1,12 @@
+* {
+  list-style: none;
+  text-decoration: none;
+}
+
+.app{
+  min-height: 100vh;
+}
+
+.main{
+  align-content: stretch;
+}
