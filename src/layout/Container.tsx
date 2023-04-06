@@ -1,19 +1,22 @@
 import { useEffect, useState } from 'react';
+import Iframe from 'react-iframe';
+import { useSelector } from 'react-redux';
 
-import Home from '../home';
+import Home from '../Home';
 
-function Container({ currentSite }) {
-  const [current, setCurrent] = useState('');
+function Container() {
+  const { href } = useSelector((state) => state.select.site);
+  const [url, setUrl] = useState(false);
 
   useEffect(() => {
-    setCurrent(currentSite);
-  }, [currentSite]);
+    setUrl(href);
+  });
 
   return (
-    <div className="bg-dark w-100 vh-100">
-      {current && <iframe className="h-100 w-100" title="element" src={current} />}
-      {!current && <Home />}
-    </div>
+    <>
+      {url && <Iframe className="w-100 flex-grow-1" src={url} />}
+      {!url && <Home />}
+    </>
   );
 }
 
