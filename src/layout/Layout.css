@@ -1,11 +1,12 @@
 .item-link {
   text-decoration: none;
   text-transform: uppercase;
-  text-align: start;
+  text-align: start;  
+  list-style: none;
 }
-
-.min-height {
-  min-height: 100%;
+.item-link-header a {
+  text-decoration: none;  
+  list-style: none;
 }
 
 .newTab {
@@ -16,13 +17,19 @@
   content: "Abrirá em uma nova aba";
   text-transform: none;
   position: absolute;
-  top: 90%;
+  top: -50%;
   left: 40%;
   white-space: nowrap;
   
-  font-size: 0.8rem;
-  background-color: #eee;  
-  color: #333;
+  font-size: .9rem;
+  background-color: #6c757d;  
+  color: #ddd;
   border-radius: 0.25rem;
   padding: 5px;
+}
+
+.bottom-menu{
+  position: fixed;
+  bottom: 0;
+  z-index: 5;
 }
