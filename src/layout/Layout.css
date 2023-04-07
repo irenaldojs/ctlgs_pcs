@@ -1,10 +1,28 @@
-.item-link{
-    text-decoration: none;
-    color: #fff;
-    text-transform: uppercase;
-    text-align: start;
+.item-link {
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: start;
 }
 
-.min-height{
-    min-height: 100%;
+.min-height {
+  min-height: 100%;
+}
+
+.newTab {
+  position: relative;
+}
+
+.newTab:hover::before{
+  content: "Abrirá em uma nova aba";
+  text-transform: none;
+  position: absolute;
+  top: 90%;
+  left: 40%;
+  white-space: nowrap;
+  
+  font-size: 0.8rem;
+  background-color: #eee;  
+  color: #333;
+  border-radius: 0.25rem;
+  padding: 5px;
 }

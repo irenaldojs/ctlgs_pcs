@@ -3,7 +3,8 @@ import Spinner from 'react-bootstrap/Spinner';
 function Loading() {
   return (
     <div className="w-100 flex-grow-1 d-flex flex-column justify-content-center align-items-center px-4">
-      <div className="d-flex align-items-center justify-content-center w-100 color-skeleton mb-5 height-skeleton-1">
+      <div className="text-secondary d-flex align-items-center justify-content-center w-100 color-skeleton mb-5 height-skeleton-1 gap-5 ">
+        <h1>Carregando...</h1>
         <Spinner animation="border" role="status">
           <span className="visually-hidden">Loading...</span>
         </Spinner>

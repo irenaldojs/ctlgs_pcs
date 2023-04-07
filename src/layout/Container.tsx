@@ -8,7 +8,7 @@ import { completedSite } from '../store/site-slice';
 
 function Container() {
   const { href, load } = useSelector((state) => state.select.site);
-  const [element, setElement] = useState(false);
+  const [element, setElement] = useState(null);
 
   const dispath = useDispatch();
 
@@ -19,10 +19,15 @@ function Container() {
         className="w-100 flex-grow-1"
         src={href}
         onLoad={() => dispath(completedSite())}
+        allow
       />,
     );
+    //console.log('erro:', error);
   }, [href, load]);
 
+  function newTab(url) {
+    window.open(url, '_blank');
+  }
   return (
     <>
       {load && <Loading />}
