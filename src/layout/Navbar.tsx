@@ -16,12 +16,12 @@ function Navbar() {
   }
 
   return (
-    <nav id="navbar" className="d-flex flex-column min-height-main bg-primary col-md-2">
+    <nav id="navbar" className="d-flex flex-column min-height-main col-md-2">
       {catalogos.map((item, index) => (
         <button
           className={`item-link p-2 btn ${
-            index === indexPage ? 'btn-info' : 'btn-primary'
-          } ${item.newTab ? 'newTab' : ''}`}
+            index === indexPage ? 'btn-secondary' : 'btn-light'
+          } ${item.newTab ? 'newTab' : ''} border-radius-none`}
           key={index}
           onClick={() => {
             if (item.newTab) {
