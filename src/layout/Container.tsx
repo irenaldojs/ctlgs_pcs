@@ -1,21 +1,33 @@
 import { useEffect, useState } from 'react';
 import Iframe from 'react-iframe';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
+import Loading from '../components/Loading';
 import Home from '../Home';
+import { completedSite } from '../store/site-slice';
 
 function Container() {
-  const { href } = useSelector((state) => state.select.site);
-  const [url, setUrl] = useState(false);
+  const { href, load } = useSelector((state) => state.select.site);
+  const [element, setElement] = useState(false);
+
+  const dispath = useDispatch();
 
   useEffect(() => {
-    setUrl(href);
-  });
+    setElement(
+      <Iframe
+        display={load ? 'none' : 'block'}
+        className="w-100 flex-grow-1"
+        src={href}
+        onLoad={() => dispath(completedSite())}
+      />,
+    );
+  }, [href, load]);
 
   return (
     <>
-      {url && <Iframe className="w-100 flex-grow-1" src={url} />}
-      {!url && <Home />}
+      {load && <Loading />}
+      {href !== '' && element}
+      {href === '' && <Home />}
     </>
   );
 }

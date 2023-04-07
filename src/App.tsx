@@ -7,9 +7,9 @@ import Navbar from './layout/Navbar';
 
 function App() {
   return (
-    <div className="vh-100">
+    <div className="min-vh-100 d-flex flex-column">
       <Header />
-      <div className="main d-flex flex-row">
+      <div className="main h-100 flex-grow-1 d-flex flex-row">
         <Navbar />
         <Container />
       </div>

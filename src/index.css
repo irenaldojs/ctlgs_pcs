@@ -10,3 +10,15 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
+
+.color-skeleton {
+  background-color: #ddd;
+}
+
+.height-skeleton-1{
+  height: 100px;
+}
+
+.height-skeleton-2{
+  height: 50px;
+}

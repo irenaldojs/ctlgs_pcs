@@ -10,3 +10,7 @@
 .main{
   align-content: stretch;
 }
+
+.min-height{
+  min-height: 100vh;
+}

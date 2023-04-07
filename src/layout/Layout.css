@@ -4,3 +4,7 @@
     text-transform: uppercase;
     text-align: start;
 }
+
+.min-height{
+    min-height: 100%;
+}

@@ -13,10 +13,7 @@ function Navbar() {
   }
 
   return (
-    <nav
-      id="navbar"
-      className="d-flex flex-column min-height-main bg-primary col-md-2 vh-100 "
-    >
+    <nav id="navbar" className="d-flex flex-column min-height-main bg-primary col-md-2">
       {catalogos.map((item, index) => (
         <button
           className="item-link p-2 btn btn-primary"
