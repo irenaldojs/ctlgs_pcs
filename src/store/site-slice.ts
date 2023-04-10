@@ -6,6 +6,9 @@ const initialState = {
     href: '',
     load: false,
   },
+  sidebar: {
+    toggle: false,
+  },
 };
 
 export const stateSlice = createSlice({
@@ -26,8 +29,12 @@ export const stateSlice = createSlice({
         load: false,
       };
     },
+    toggleSidebar: (state) => {
+      state.sidebar.toggle = !state.sidebar.toggle;
+      console.log('chamou', state.sidebar.toggle);
+    },
   },
 });
 
-export const { swapSite, completedSite } = stateSlice.actions;
+export const { swapSite, completedSite, toggleSidebar } = stateSlice.actions;
 export const siteReducer = stateSlice.reducer;

@@ -1,10 +1,9 @@
-import './Home.css';
-
 function Home() {
   return (
-    <div className="p-5">
-      <h1 className="text-center">Bem vindo</h1>
-      <div className="texto-1 fs-5">
+    <div className="p-sm-5 container-fluid">
+      <br />
+      <h1 className="fs-1 text-center">Bem vindo</h1>
+      <div className="fs-5">
         <p>
           Na hora de comprar uma peça para o seu veículo, é fundamental estar munido das
           informações corretas do seu carro. Algumas dessas informações podem ser de fácil

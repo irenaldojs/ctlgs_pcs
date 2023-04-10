@@ -40,7 +40,12 @@ export const catalogos = [
     newTab: false,
   },
   {
-    title: 'axios-monroe',
+    title: 'monroe',
+    href: 'https://www.monroeaxios.com.br/catalogo-online-e-apps',
+    newTab: false,
+  },
+  {
+    title: 'axios',
     href: 'https://www.monroeaxios.com.br/catalogo-online-e-apps',
     newTab: false,
   },
@@ -65,7 +70,7 @@ export const catalogos = [
     newTab: true,
   },
   {
-    title: 'auto-experts **',
+    title: '* auto-experts *',
     href: 'https://autoexperts.parts/?mercadoId=92314cc6-2fb6-449d-9b64-eb59b0fb9bf8&idioma=pt-br',
     newTab: false,
   },

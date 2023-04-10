@@ -1,9 +1,22 @@
-import { BookIcon, HomeIcon } from '../components/Icons';
+import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+
+import ButtonItem from '../components/ButtonItem';
+import { toggleSidebar } from '../store/site-slice';
+
 function BottomMenu() {
+  const dispath = useDispatch();
+  const navigate = useNavigate();
+
   return (
-    <div className="bottom-menu col-12 bg-primary p-2 d-flex align-items-center justify-content-around d-md-none text-light">
-      <HomeIcon />
-      <BookIcon />
+    <div
+      className={`bg-primary d-flex align-items-center justify-content-around text-light`}
+    >
+      <ButtonItem icon={<i className="bi bi-house" />} onClick={() => navigate('/')} />
+      <ButtonItem
+        icon={<i className="bi bi-book" />}
+        onClick={() => dispath(toggleSidebar())}
+      />
     </div>
   );
 }

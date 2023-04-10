@@ -13,10 +13,10 @@ function IframePage() {
   useEffect(() => {
     setElement(
       <Iframe
-        display={load ? 'none' : 'block'}
-        className="w-100 flex-grow-1"
+        display={load ? 'none' : ''}
         src={href}
         onLoad={() => dispath(completedSite())}
+        className="h-100 w-100"
       />,
     );
   }, [href, load]);

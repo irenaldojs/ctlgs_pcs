@@ -2,23 +2,24 @@ import './Layout.css';
 
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 import { catalogos } from '../listaCatalogos.js';
-import { swapSite } from '../store/site-slice';
+import { swapSite, toggleSidebar } from '../store/site-slice';
 
-function Navbar() {
+function Sidebar() {
   const dispath = useDispatch();
   const navigate = useNavigate();
   const [indexPage, setIndexPage] = useState('');
 
   function handleClick({ title, href }, index) {
     dispath(swapSite({ title, href }));
+    dispath(toggleSidebar());
     setIndexPage(index);
   }
 
   return (
-    <nav id="navbar" className="d-flex flex-column col-12 col-md-2 p-1">
+    <nav className="d-flex flex-column">
       {catalogos.map((item, index) => (
         <button
           key={index}
@@ -41,4 +42,4 @@ function Navbar() {
   );
 }
 
-export default Navbar;
+export default Sidebar;
