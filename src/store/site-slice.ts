@@ -4,6 +4,7 @@ const initialState = {
   site: {
     title: '',
     href: '',
+    sandbox: '',
     load: false,
   },
   sidebar: {
@@ -19,6 +20,7 @@ export const stateSlice = createSlice({
       state.site = {
         title: action.payload.title,
         href: action.payload.href,
+        sandbox: action.payload.sandbox,
         load: true,
       };
     },
@@ -26,12 +28,16 @@ export const stateSlice = createSlice({
       state.site = {
         title: state.site.title,
         href: state.site.href,
+        sandbox: state.site.sandbox,
         load: false,
       };
     },
-    toggleSidebar: (state) => {
+    toggleSidebar: (state, action) => {
       state.sidebar.toggle = !state.sidebar.toggle;
-      console.log('chamou', state.sidebar.toggle);
+      if (action.payload) {
+        state.sidebar.toggle = action.payload.toggle;
+        console.log('ação', action.payload.toggle);
+      }
     },
   },
 });

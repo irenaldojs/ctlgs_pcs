@@ -1,0 +1,10 @@
+.button-icon{
+    position: relative;
+    font-size: 1.6rem;
+}
+
+.button-title{
+    position: absolute;
+    font-size: 0.7rem;
+    bottom: 5px;
+}

@@ -10,12 +10,39 @@ function BottomMenu() {
 
   return (
     <div
-      className={`bg-primary d-flex align-items-center justify-content-around text-light`}
+      className={`bg-primary d-flex align-items-center justify-content-around text-light h-100`}
     >
-      <ButtonItem icon={<i className="bi bi-house" />} onClick={() => navigate('/')} />
       <ButtonItem
-        icon={<i className="bi bi-book" />}
-        onClick={() => dispath(toggleSidebar())}
+        title={'Inicio'}
+        icon="bi-house"
+        onClick={() => {
+          dispath(toggleSidebar({ toggle: false }));
+          navigate('/');
+        }}
+      />
+      <ButtonItem
+        title={'Catálogos'}
+        icon="bi-book"
+        onClick={() => {
+          dispath(toggleSidebar());
+          navigate('/catalogos');
+        }}
+      />
+      <ButtonItem
+        title={'Pdfs'}
+        icon="bi-file-pdf"
+        onClick={() => {
+          dispath(toggleSidebar({ toggle: false }));
+          navigate('/pdfs');
+        }}
+      />
+      <ButtonItem
+        title={'Sobre'}
+        icon="bi-person-vcard"
+        onClick={() => {
+          dispath(toggleSidebar({ toggle: false }));
+          navigate('/about');
+        }}
       />
     </div>
   );

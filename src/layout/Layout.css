@@ -1,12 +1,12 @@
 .item-link {
   text-decoration: none;
   text-transform: uppercase;
-  text-align: start; 
+  text-align: start;
   list-style: none;
   font-size: 1rem;
 }
 .item-link-header a {
-  text-decoration: none;  
+  text-decoration: none;
   list-style: none;
 }
 
@@ -14,16 +14,16 @@
   position: relative;
 }
 
-.newTab:hover::before{
-  content: "Abrirá em uma nova aba";
+.newTab:hover::before {
+  content: 'Abrirá em uma nova aba';
   text-transform: none;
   position: absolute;
   top: -50%;
   left: 40%;
   white-space: nowrap;
-  
-  font-size: .9rem;
-  background-color: #6c757d;  
+
+  font-size: 0.9rem;
+  background-color: #6c757d;
   color: #ddd;
   border-radius: 0.25rem;
   padding: 5px;
@@ -31,12 +31,19 @@
 
 @media (min-width: 576px) {
   .item-link {
-    font-size: .7rem;
+    font-size: 0.7rem;
   }
 }
 
 @media (min-width: 992px) {
-  .item-link{
-    font-size: 1rem;
+  .item-link {
+    font-size: .8rem;
+  }
+}
+
+
+@media (min-width: 992px) {
+  .item-link {
+    font-size: .9rem;
   }
 }

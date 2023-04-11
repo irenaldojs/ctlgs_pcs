@@ -12,14 +12,14 @@ function Sidebar() {
   const navigate = useNavigate();
   const [indexPage, setIndexPage] = useState('');
 
-  function handleClick({ title, href }, index) {
-    dispath(swapSite({ title, href }));
+  function handleClick({ title, href, sandbox }, index) {
+    dispath(swapSite({ title, href, sandbox }));
     dispath(toggleSidebar());
     setIndexPage(index);
   }
 
   return (
-    <nav className="d-flex flex-column">
+    <>
       {catalogos.map((item, index) => (
         <button
           key={index}
@@ -31,14 +31,14 @@ function Sidebar() {
               window.open(item.href, '_blank');
             } else {
               handleClick(item, index);
-              navigate('/catalogo');
+              navigate('/catalogos');
             }
           }}
         >
           {item.title}
         </button>
       ))}
-    </nav>
+    </>
   );
 }
 
